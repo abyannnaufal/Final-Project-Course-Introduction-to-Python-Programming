@@ -50,8 +50,12 @@ def add_transaction():
             trxn_id = input('ID Transaksi: ')
             trxn_num = input('Nomor Transaksi: ')
             product = input('Nama Produk: ')
-            quantity = int(input('Qty: '))
-            price = int(input('Harga: '))
+            try:
+                quantity = int(input('Qty: '))
+                price = int(input('Harga: '))
+            except ValueError:
+                print('Qty dan Harga harus berupa angka.')
+                continue
             subtotal = price * quantity
 
             trxn_file.write(trxn_id + '\n')
