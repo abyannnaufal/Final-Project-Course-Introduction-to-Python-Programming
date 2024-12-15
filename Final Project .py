@@ -132,7 +132,7 @@ def modify_transaction():
         if found:
             print('\nFile telah diperbaharui.')
         else:
-            print('\nTansaksi dengan ID tersebut tidak ditemukan didalam file.')
+            print('\nTansaksi dengan Nomor Transaksi tersebut tidak ditemukan didalam file.')
     except FileNotFoundError:
         print('File trxn.txt tidak dapat ditemukan.')
     except IOError as e:
